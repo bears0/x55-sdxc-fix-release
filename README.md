@@ -75,7 +75,20 @@ X55 SDXC fix loader v1
 
 ## Linux install
 
-Put the X55 into Rockchip Loader mode, then run:
+You will need rkdeveloptool
+```bash
+sudo apt update
+sudo apt install rkdeveloptool
+```
+
+Put the X55 into Rockchip Loader mode:
+1. Power off
+2. Remove SD cards (important)
+3. Push left analog stick to the left
+4. Plug in a USB-C data cable
+5. Hit the reset button.
+6. The screen will remain black*
+ then run:
 
 ```bash
 chmod +x install-linux.sh restore-linux.sh
@@ -106,7 +119,14 @@ Requirements:
 2. `rkdeveloptool.exe` in the same folder as this package, or available in PATH
 3. X55 in Rockchip Loader mode
 
-Run:
+Put the X55 into Rockchip Loader mode:
+1. Power off
+2. Remove SD cards (important)
+3. Push left analog stick to the left
+4. Plug in a USB-C data cable
+5. Hit the reset button.
+6. The screen will remain black*
+ then run:
 
 ```text
 install-windows.bat
