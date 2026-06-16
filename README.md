@@ -84,10 +84,12 @@ sudo apt install rkdeveloptool
 Put the X55 into Rockchip Loader mode:
 1. Power off
 2. Remove SD cards (important)
-3. Push left analog stick to the left
+3. Hold left analog stick to the left
 4. Plug in a USB-C data cable
 5. Hit the reset button.
 6. The screen will remain black*
+7. Return left stick to center after about 5 seconds
+   
  then run:
 
 ```bash
@@ -122,10 +124,12 @@ Requirements:
 Put the X55 into Rockchip Loader mode:
 1. Power off
 2. Remove SD cards (important)
-3. Push left analog stick to the left
+3. Hold left analog stick to the left
 4. Plug in a USB-C data cable
 5. Hit the reset button.
 6. The screen will remain black*
+7. Return left stick to center after about 5 seconds
+   
  then run:
 
 ```text
