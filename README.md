@@ -24,6 +24,14 @@ The fix adds a short delay and retry loop during early SD card initialization be
 | `restore-windows.bat` | Windows restore script using the backup created by the installer |
 | `x55-sdxc-fix.patch` | Source patch showing the SDXC workaround and boot banner |
 
+## Requirements
+https://github.com/rockchip-linux/rkdeveloptool
+You can build this tool yourself or install using
+```bash
+sudo apt update
+sudo apt install -y rkdeveloptool
+```
+
 ## Important warning
 
 This file is **not** a normal Rockchip `LDR` upgrade-loader package.
@@ -85,7 +93,7 @@ Put the X55 into Rockchip Loader mode:
 1. Power off
 2. Remove SD cards (important)
 3. Hold left analog stick to the left
-4. Plug in a USB-C data cable
+4. Plug a USB-C data cable into the DC/OTG port
 5. Hit the reset button.
 6. The screen will remain black*
 7. Return left stick to center after about 5 seconds
@@ -111,41 +119,6 @@ To restore the backup made during install:
 
 ```bash
 ./restore-linux.sh backup-slot0-before-x55-sdxc-fix.bin
-```
-
-## Windows install
-
-Requirements:
-
-1. Rockchip USB driver installed
-2. `rkdeveloptool.exe` in the same folder as this package, or available in PATH
-3. X55 in Rockchip Loader mode
-
-Put the X55 into Rockchip Loader mode:
-1. Power off
-2. Remove SD cards (important)
-3. Hold left analog stick to the left
-4. Plug in a USB-C data cable
-5. Hit the reset button.
-6. The screen will remain black*
-7. Return left stick to center after about 5 seconds
-   
- then run:
-
-```text
-install-windows.bat
-```
-
-The script will back up the current loader slot before writing the fixed image.
-
-After writing, it prints SHA256 hashes for the source image and readback image. They must match.
-
-## Windows restore
-
-To restore the backup made during install:
-
-```text
-restore-windows.bat backup-slot0-before-x55-sdxc-fix.bin
 ```
 
 ## Technical details
