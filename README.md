@@ -121,6 +121,8 @@ To restore the backup made during install:
 ./restore-linux.sh backup-slot0-before-x55-sdxc-fix.bin
 ```
 
+## Windows is currently a WIP. I will have to build rkdevtool for Windows. This may require you to install RKDevTool so that you get the drivers too.
+
 ## Technical details
 
 The installed file is:
